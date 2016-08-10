@@ -1,0 +1,19 @@
+{
+  "name": "jules-truong.fr-v2",
+  "version": "1.0.0",
+  "description": "Jules Truong portfolio Resume CV",
+  "main": "index.js",
+  "dependencies": {
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.1.0",
+    "nicescroll": "git+ssh://git@github.com/inuyaksa/jquery.nicescroll.git"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass sass/style.scss:css/style.css --style compressed",
+    "sass-watch": "sass -w sass/style.scss:css/style.css --style compressed"
+  },
+  "author": "Jules TRUONG",
+  "license": "ISC"
+}

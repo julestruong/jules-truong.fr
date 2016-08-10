@@ -1,0 +1,9 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#content {
+    width: calc(100% - #{$left-menu-width});
+    margin-left:$left-menu-width;
+    padding-left: 10px;
+}

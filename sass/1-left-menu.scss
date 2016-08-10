@@ -1,0 +1,162 @@
+
+nav {
+    position:fixed;
+    left:0;
+    top:0;
+    height:100%;
+    width: $left-menu-width;
+
+    background: $background-menu;
+
+    #lang {
+        margin:10px 0 5px 0;
+
+        .country {
+            width:60px;
+            border: 3px solid #777;
+            border-radius: 15px;
+            opacity: 0.6;
+            margin: 0 35px;
+            @include transition(opacity .25s ease);
+
+            &.active {
+                border-color: #ddd;
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    >a {
+        margin-bottom:15px;
+        margin-top:10px;
+        display: block;
+
+        img {
+            border-radius: 50%;
+            width: $left-menu-width/1.5;
+            border: 5px solid #232323;
+            margin:auto;
+            display: block;
+
+            @include transition(border .25s ease);
+
+            &:hover {
+                border:5px solid #000;
+            }
+        }
+
+        &.active {
+            border-left: 5px solid grey;
+            background-color: #2b2b2b;
+        }
+    }
+
+    ul#menu {
+        margin:0;
+        padding:0;
+
+        li {
+            list-style-type: none;
+            text-transform: uppercase;
+            line-height: $menu-font-size*3;
+            font-size: $menu-font-size;
+            color: white;
+            padding-left: $left-menu-width/10;
+            margin-bottom: 10px;
+            border-left: 5px solid $background-menu;
+
+
+            @include transition(all .25s ease);
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                width: 100%;
+            }
+
+            i {
+                margin: 10px;
+                font-size: $menu-font-size*1.3;
+            }
+
+            &:hover {
+                background:#111;
+                color: $background-menu;
+    
+                a {
+                    color: inherit;
+                }
+            }
+
+            &:nth-child(1):hover { color: $color1; border-color: $color1; }
+            &:nth-child(2):hover { color: $color2; border-color: $color2; }
+            &:nth-child(3):hover { color: $color3; border-color: $color3; }
+            &:nth-child(4):hover { color: $color4; border-color: $color4; }
+            &:nth-child(5):hover { color: $color5; border-color: $color5; }
+            &:nth-child(6):hover { color: $color6; border-color: $color6; }
+            &:nth-child(7):hover { color: $color7; border-color: $color7; }
+
+        }
+    }
+
+    #social {
+        
+        list-style-type: none;
+        position:absolute;
+        bottom: 20px;
+        padding:0;
+        margin:0;
+
+        margin-left:10px;
+
+        li {
+
+            float: left;
+
+            .ico
+            {
+                display: inline-block;
+                height: 44px;
+                width: 44px;
+                background-size: 34px 34px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                margin: 9px 0px;
+                text-indent: -9999em;   
+                margin:4px;
+                border-radius: 45%;
+                
+                @include transition(all 250ms linear);
+                background-color: #737373;
+            }
+        }
+
+        .ico_twitter {
+            background-image:url("../img/social/twitter.png") ;
+            &:hover { background-color: rgb(0,172,237); }
+        }
+
+        .ico_stackoverflow {
+            background-image:url("../img/social/stackoverflow.png") ;
+            &:hover { background-color: rgb(244,121,32); }
+        }
+
+        .ico_facebook {
+            background-image:url("../img/social/facebook.png") ;
+            &:hover { background-color: rgb(59,89,152); }
+        }
+
+        .ico_skype {
+            background-image:url("../img/social/skype.png") ;
+            &:hover { background-color: rgb(0,175,240); }
+        }
+
+        .ico_github {    
+            background-image:url("../img/social/github.png") ;
+            &:hover { background-color: #1F1E1E; }
+        }
+
+    }
+}
