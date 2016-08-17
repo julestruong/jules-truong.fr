@@ -1,19 +1,22 @@
-
 nav {
     position:fixed;
     left:0;
     top:0;
     height:100%;
     width: $left-menu-width;
-
     background: $background-menu;
+    @include transition(left .25s ease);
+
+    @media screen and (max-width: $break-large) {
+        left:-$left-menu-width;
+    }
 
     #lang {
-        margin:10px 0 5px 0;
+        margin:$menu-margin-between-section 0 5px 0;
 
         .country {
             width:60px;
-            border: 3px solid #777;
+            border: 3px solid #555;
             border-radius: 15px;
             opacity: 0.6;
             margin: 0 35px;
@@ -30,25 +33,24 @@ nav {
 
     >a {
         margin-bottom:15px;
-        margin-top:10px;
+        margin-top:$menu-margin-between-section;
         display: block;
 
         img {
             border-radius: 50%;
-            width: $left-menu-width/1.5;
-            border: 5px solid #232323;
+            width: $left-menu-width/2;
+            border: 8px solid #121212;
             margin:auto;
             display: block;
 
             @include transition(border .25s ease);
 
             &:hover {
-                border:5px solid #000;
+                border:8px solid #343434;
             }
         }
 
         &.active {
-            border-left: 5px solid grey;
             background-color: #2b2b2b;
         }
     }
@@ -56,6 +58,7 @@ nav {
     ul#menu {
         margin:0;
         padding:0;
+        margin-top: $menu-margin-between-section;
 
         li {
             list-style-type: none;
@@ -103,60 +106,60 @@ nav {
 
     #social {
         
-        list-style-type: none;
         position:absolute;
-        bottom: 20px;
-        padding:0;
-        margin:0;
+        bottom: $menu-margin-between-section;
+       
+        background-color: #737373;
 
-        margin-left:10px;
+        ul {
+            padding:0;
+            margin:0;
+            list-style-type: none;
+            li {
+                float: left;
+                margin:2px;
+                width: 52px;
+                height: 52px;
+                .ico
+                {
+                    display: inline-block;
+                    height: 44px;
+                    width: 44px;
+                    background-size: 34px 34px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    margin: 9px 0px;
+                    text-indent: -9999em;   
+                    margin:4px;
+                    
+                    @include transition(all 250ms linear);
+                }
 
-        li {
+                .ico_twitter {
+                    background-image:url("../img/social/twitter.png") ;
+                    &:hover { background-color: rgb(0,172,237); }
+                }
 
-            float: left;
+                .ico_stackoverflow {
+                    background-image:url("../img/social/stackoverflow.png") ;
+                    &:hover { background-color: rgb(244,121,32); }
+                }
 
-            .ico
-            {
-                display: inline-block;
-                height: 44px;
-                width: 44px;
-                background-size: 34px 34px;
-                background-position: center center;
-                background-repeat: no-repeat;
-                margin: 9px 0px;
-                text-indent: -9999em;   
-                margin:4px;
-                border-radius: 45%;
-                
-                @include transition(all 250ms linear);
-                background-color: #737373;
+                .ico_facebook {
+                    background-image:url("../img/social/facebook.png") ;
+                    &:hover { background-color: rgb(59,89,152); }
+                }
+
+                .ico_skype {
+                    background-image:url("../img/social/skype.png") ;
+                    &:hover { background-color: rgb(0,175,240); }
+                }
+
+                .ico_github {    
+                    background-image:url("../img/social/github.png") ;
+                    &:hover { background-color: #1F1E1E; }
+                }
             }
         }
-
-        .ico_twitter {
-            background-image:url("../img/social/twitter.png") ;
-            &:hover { background-color: rgb(0,172,237); }
-        }
-
-        .ico_stackoverflow {
-            background-image:url("../img/social/stackoverflow.png") ;
-            &:hover { background-color: rgb(244,121,32); }
-        }
-
-        .ico_facebook {
-            background-image:url("../img/social/facebook.png") ;
-            &:hover { background-color: rgb(59,89,152); }
-        }
-
-        .ico_skype {
-            background-image:url("../img/social/skype.png") ;
-            &:hover { background-color: rgb(0,175,240); }
-        }
-
-        .ico_github {    
-            background-image:url("../img/social/github.png") ;
-            &:hover { background-color: #1F1E1E; }
-        }
-
     }
 }

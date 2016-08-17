@@ -3,7 +3,13 @@ html {
 }
 
 #content {
-    width: calc(100% - #{$left-menu-width});
+    width: calc(100% - #{$left-menu-width} - 10px);
     margin-left:$left-menu-width;
     padding-left: 10px;
+
+    
+    @media screen and (max-width: $break-large) {
+        width: 100%;
+        margin-left: 0px;
+    }
 }
