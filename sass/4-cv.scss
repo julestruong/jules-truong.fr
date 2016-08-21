@@ -1,38 +1,40 @@
-$height-cv: 370px;
+$height-cv: 350px;
 $width-icon: 30%;
-$background-color: rgb(73, 138, 109);
 $text-color: white;
 
-$button-background: #cce6d7;
-$button-background-hover: white;
-$button-color: grey;
+$button-background: rgba(200,200,200,0.65);
+$button-background-hover:rgba(255,255,255,0.65);
+$button-color: black;
 $button-color-hover: black;
 
 #cv {
 
     background-size: cover;
     height: $height-cv;
-    background-color: $background-color;
+    background: url(../img/macbook.jpg);
     background-attachment: fixed;
 
+    .cv-bloc {
+        float:left;
+        text-align: center;
+        height: $height-cv;
+        background: rgba(0,0,0,0.5);
+    }
 
     #cv-icon {
-        float:left;
         width: $width-icon;
-        text-align: center;
+
         img { 
-            height:$height-cv;
+            height:$height-cv + 20px;
+            margin-left:-25px;
         }
     }
 
     #cv-text {
-
-        float: left;
         width: 100% - $width-icon;
         position: relative;
         margin: auto;
         color: $text-color;
-        text-align: center;
 
         #cv-wrapper-text {
 
@@ -56,7 +58,7 @@ $button-color-hover: black;
                 background-color: $button-background;
                 padding:15px 70px;
                 border: 0px;
-                border-bottom: 4px solid darken($background-color, 10);
+                border-bottom: 4px solid darken(white, 10);
                 @include transition(all 0.25s ease);
 
                 a {
@@ -74,7 +76,7 @@ $button-color-hover: black;
                 }
 
                 i.fa-download {
-                    padding: 0px 10px;
+                    padding-left: 10px;
                     font-size: 1.2em;
                 }
             }
