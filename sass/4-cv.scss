@@ -1,26 +1,37 @@
+$height-cv: 370px;
+$width-icon: 30%;
+$background-color: rgb(73, 138, 109);
+$text-color: white;
+
+$button-background: #cce6d7;
+$button-background-hover: white;
+$button-color: grey;
+$button-color-hover: black;
+
 #cv {
 
     background-size: cover;
-    height: 360px;
-    background-color: rgb(73, 138, 109);
+    height: $height-cv;
+    background-color: $background-color;
     background-attachment: fixed;
-    min-height: 100px;
+
 
     #cv-icon {
         float:left;
-        width: 30%;
+        width: $width-icon;
+        text-align: center;
         img { 
-            height:370px;
+            height:$height-cv;
         }
     }
 
     #cv-text {
 
         float: left;
-        width: 70%;
+        width: 100% - $width-icon;
         position: relative;
         margin: auto;
-        color: white;
+        color: $text-color;
         text-align: center;
 
         #cv-wrapper-text {
@@ -30,25 +41,42 @@
 
             h2 {
                 font-weight: 100;
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid $text-color;
                 padding:15px;
             }
 
             p {
-                padding: 15px;
+                padding: 20px;
                 line-height: 1.5;
             }
 
             button {
                 position: relative;
                 top: 20%;
-                color: white;
-                padding:15px;
+                color: $button-color;
+                background-color: $button-background;
+                padding:15px 70px;
                 border: 0px;
+                border-bottom: 4px solid darken($background-color, 10);
                 @include transition(all 0.25s ease);
+
+                a {
+                    color:$button-color; 
+                }
+
                 &:hover {
-                    background:white;
+                    background: $button-background-hover;
+                    cursor: pointer;
+                    color:$button-color-hover;
                     @include box-shadow(0px 5px 10px #1f1e1e);
+                    a {
+                        color: $button-color-hover;
+                    }
+                }
+
+                i.fa-download {
+                    padding: 0px 10px;
+                    font-size: 1.2em;
                 }
             }
         }
