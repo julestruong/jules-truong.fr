@@ -2,6 +2,16 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
+ h2.title-section {
+    font-weight: 100;
+    border-bottom: 1px solid black;
+    padding:15px;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-top: 15px;
+}
+
 #content {
     width: calc(100% - #{$left-menu-width});
     margin-left:$left-menu-width;
@@ -10,4 +20,18 @@ html {
         width: 100%;
         margin-left: 0px;
     }
+}
+
+
+*, *:after, *:before { 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+.clearfix:before, .clearfix:after { 
+    display: table; content: ''; 
+}
+
+.clearfix:after { 
+    clear: both; 
 }

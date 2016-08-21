@@ -40,9 +40,8 @@ $button-color-hover: black;
             margin: auto;
 
             h2 {
-                font-weight: 100;
                 border-bottom: 1px solid $text-color;
-                padding:15px;
+                width:inherit;
             }
 
             p {
