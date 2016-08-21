@@ -2,9 +2,9 @@ $height-cv: 350px;
 $width-icon: 30%;
 $text-color: white;
 
-$button-background: rgba(200,200,200,0.65);
+$button-background: rgba(0,0,0,0);
 $button-background-hover:rgba(255,255,255,0.65);
-$button-color: black;
+$button-color: white;
 $button-color-hover: black;
 
 #cv {
@@ -59,7 +59,7 @@ $button-color-hover: black;
                 padding:15px 70px;
                 border: 0px;
                 border-bottom: 4px solid darken(white, 10);
-                @include transition(all 0.25s ease);
+                @include transition(all 0.65s ease);
 
                 a {
                     color:$button-color; 
