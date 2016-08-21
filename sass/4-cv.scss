@@ -1,0 +1,56 @@
+#cv {
+
+    background-size: cover;
+    height: 360px;
+    background-color: rgb(73, 138, 109);
+    background-attachment: fixed;
+    min-height: 100px;
+
+    #cv-icon {
+        float:left;
+        width: 30%;
+        img { 
+            height:370px;
+        }
+    }
+
+    #cv-text {
+
+        float: left;
+        width: 70%;
+        position: relative;
+        margin: auto;
+        color: white;
+        text-align: center;
+
+        #cv-wrapper-text {
+
+            width:75%;
+            margin: auto;
+
+            h2 {
+                font-weight: 100;
+                border-bottom: 1px solid white;
+                padding:15px;
+            }
+
+            p {
+                padding: 15px;
+                line-height: 1.5;
+            }
+
+            button {
+                position: relative;
+                top: 20%;
+                color: white;
+                padding:15px;
+                border: 0px;
+                @include transition(all 0.25s ease);
+                &:hover {
+                    background:white;
+                    @include box-shadow(0px 5px 10px #1f1e1e);
+                }
+            }
+        }
+    }
+}

@@ -31,8 +31,12 @@
 
     <body>
         <!-- PART 1 - LEFT MENU -->
+        <div id="burger-menu">
+            <div id="burger-menu-top" class="burger-menu-bar"></div>
+            <div id="burger-menu-middle" class="burger-menu-bar"></div>
+            <div id="burger-menu-bottom" class="burger-menu-bar"></div>
+        </div>
         <nav>
-          
             <div id="lang">
                 <img src="img/country/fra.png" class="country active">
                 <img src="img/country/eng.png" class="country">
@@ -59,7 +63,7 @@
                     <li>
                         <i class="fa fa-file-text" aria-hidden="true"></i>
                         <span>Resume</span>
-                    </li>
+                    </li>   
                 </a>
                 <a href="#">
                     <li>
@@ -100,7 +104,7 @@
 
         <div id="content">
         <!-- PART 2 - HOME --> 
-           <section>
+           <section id="home">
                <h1>Hi, I'm Jules TRUONG</h1>
                <h2>I'm a passionate fullstack web developer that design and develop modern website</h2>
            </section>
@@ -113,8 +117,20 @@
             <section></section>
         <!-- END PART 4 -->
         <!-- PART 5 - CV --> 
-            <section></section>
-           
+            <section id="cv">
+                <div id="cv-icon" class="">
+                    <img src="img/cv/cv.png" alt="">
+                </div>
+                <div id="cv-text" class="">
+                    <div id="cv-wrapper-text">
+                        <h2>Télécharger mon CV</h2>
+                        <p>N'hésitez pas à consulter mon CV pour plus d'informations sur mes différentes expériences professionnelles et personnelles mais également sur ma formation
+                            et les différentes technologies que je maîtrise.</p>
+                        <button id="cv_download"><i class="download"></i><a target="_blank" href="/pdf/cv_julestruong.pdf">
+                                Télécharger mon CV au format pdf</a></button>
+                    </div>
+                </div>
+            </section>
         <!-- END PART 5 -->
         <!-- PART 5 - PORTFOLIO --> 
             <section></section>
